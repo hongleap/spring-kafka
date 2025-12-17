@@ -3,9 +3,13 @@ spring:
     name: producer
 
   Kafka:
-    group-id: order-group
-    auto-offset-reset: earliest
-    bootstrap-servers: { localhost: 9092 }
+    bootstrap-servers: localhost:9092
 
 server:
   port: 8082
+
+#logging:
+#  level:
+#    org.apache.kafka: INFO
+#    org.springframework.kafka: INFO
+#    com.hongleap.producer: DEBUG

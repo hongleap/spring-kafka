@@ -1,16 +1,22 @@
 package com.hongleap.producer.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.*;
 
-@Data
-@Builder
-@NoArgsConstructor
+import java.time.LocalDateTime;
+
+@Getter
+@Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class OrderProduct {
     private String orderId;
     private String productName;
-    private int quantity;
+    private Integer quantity;
+    private Double price;
+    private String customerId;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime timestamp;
+
 }

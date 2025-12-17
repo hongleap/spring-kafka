@@ -3,7 +3,12 @@ spring:
     name: consumer
 
   Kafka:
-    bootstrap-servers: { localhost: 9092 }
+    bootstrap-servers: localhost:9092
+#    consumer:
+#      properties:
+#        spring.json.trusted.packages: com.hongleap.producer.dto
+#        trusted all package on local/env
+#        spring.json.trusted.packages: com.hongleap.*
 
 server:
   port: 8081
